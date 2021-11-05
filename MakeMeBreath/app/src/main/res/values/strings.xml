@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MakeMeBreath</string>
+
+    <!--> Home Page <-->
+
+    <string name="home_page_add_object_button">AJOUTER UN APPAREIL</string>
+
+    <!--> Detail Page <-->
+    <string name="detail_page_air_quality_label">Qualité de l\'air</string>
+    <string name="detail_page_temperature_label">Température</string>
+    <string name="detail_page_humidity_label">Taux d\'humidité</string>
+    <string name="detail_page_advice_label">Qualité de l\'air</string>
+    
+    <string-array name="detail_page_object_name_input">
+        <item>Appareil A401</item>
+        <item>Appareil A402</item>
+        <item>Appareil A403</item>
+    </string-array>
+
+    <!--> Graphic Page <-->
+    <string-array name="charts_page_object_name_input">
+        <item>Appareil A401</item>
+        <item>Appareil A402</item>
+        <item>Appareil A403</item>
+    </string-array>
+
+</resources>
