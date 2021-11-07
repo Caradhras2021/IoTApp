@@ -21,6 +21,6 @@ public class DeviceItem {
     // methods
     public  String getName(){ return name; }
     public  Boolean isOn(){ return state; }
-    public Boolean isDeleted(){ return state; }
+    public Boolean isDeleted(){ return deleted; }
 
 }

@@ -9,32 +9,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import java.util.List;
+
 public class gridAdapter extends BaseAdapter {
 
     Context context;
-    String[] objectNames;
-    Boolean[] objectStates;
-    Boolean[] objectDeleted;
-    int[] objectImages;
-
     LayoutInflater inflater;
 
-    public gridAdapter(Context context, String[] objectNames, Boolean[] objectStates, Boolean[] objectDeleted, int[] objectImages) {
+    List<DeviceItem> deviceItems;
+
+    public gridAdapter(Context context, List<DeviceItem> deviceItems) {
         this.context = context;
-        this.objectNames = objectNames;
-        this.objectStates = objectStates;
-        this.objectDeleted = objectDeleted;
-        this.objectImages = objectImages;
+        this.deviceItems = deviceItems;
     }
 
     @Override
     public int getCount() {
-        return objectNames.length;
+        return deviceItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return deviceItems.get(position) ;
     }
 
     @Override
@@ -57,12 +53,8 @@ public class gridAdapter extends BaseAdapter {
         ToggleButton toggleButton = convertView.findViewById(R.id.switch1);
         ImageView deleteImageView = convertView.findViewById(R.id.deleteImageView);
 
-        imageView.setImageResource(objectImages[position]);
-        textView.setText(objectNames[position]);
-        toggleButton.setChecked(objectStates[position]);
-
-
-
+        textView.setText(deviceItems.get(position).getName());
+        toggleButton.setChecked(deviceItems.get(position).isOn());
 
         return convertView;
     }
