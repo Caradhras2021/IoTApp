@@ -8,10 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+import androidx.recyclerview.widget.RecyclerView;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class gridAdapter extends BaseAdapter {
+
+public class gridAdapter extends BaseAdapter  {
 
     Context context;
     LayoutInflater inflater;
