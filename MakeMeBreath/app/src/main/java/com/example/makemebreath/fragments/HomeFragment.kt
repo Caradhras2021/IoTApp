@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.makemebreath.DeviceAdapter
 import com.example.makemebreath.R
@@ -13,12 +14,12 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-
         val view =  inflater?.inflate(R.layout.home_fragment, container, false)
 
         val gridRecyclerView = view.findViewById<RecyclerView>(R.id.grid_recycler_view)
-        gridRecyclerView.adapter = DeviceAdapter(R.layout.grid_item)
 
+        gridRecyclerView.layoutManager = GridLayoutManager(getActivity(), 3)
+        gridRecyclerView.adapter = DeviceAdapter(R.layout.grid_item)
 
 
         return view
